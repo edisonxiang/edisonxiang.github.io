@@ -48,6 +48,7 @@ The Kubernetes Scheduler is able to find the most fit node for pods. The actual 
 
 ```DefaultProvider``` is registered by two functions ```defaultPredicates``` and ```defaultPriorities```. Also these two functions can be configured by setting the parameter ```--policy-config-file string```. Here is the example about scheduler-policy-config.json.
 
+```
 {
 	"kind" : "Policy",
 	"apiVersion" : "v1",
@@ -67,6 +68,7 @@ The Kubernetes Scheduler is able to find the most fit node for pods. The actual 
 		],
 	"hardPodAffinitySymmetricWeight" : 10
 }
+```
 
 ## 4. Scheduler Algorithm
 
