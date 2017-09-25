@@ -92,16 +92,16 @@ Fit is determined by inter-pod affinity. AffinityAnnotationKey represents the ke
 Evaluate if a pod can fit due to the volumes it requests, and those that are already mounted. Currently supported volumes are: AWS EBS, GCE PD, ISCSI and Ceph RBD. Only Persistent Volume Claims for those supported types are checked. Persistent Volumes added directly to pods are not evaluated and are not constrained by this policy.
 
 #### 4.1.7 GeneralPredicates
-* PodFitsResources 
+* PodFitsResources: 
 Check if the free resource (CPU and Memory) meets the requirement of the Pod. The free resource is measured by the capacity minus the sum of requests of all Pods on the node. To learn more about the resource QoS in Kubernetes, please check QoS proposal.
 
-* PodFitsHost
+* PodFitsHost: 
 Filter out all nodes except the one specified in the PodSpec's NodeName field.
 
-* PodFitsHostPorts
+* PodFitsHostPorts: 
 Check if any HostPort required by the Pod is already occupied on the node.
 
-* PodMatchNodeSelector
+* PodMatchNodeSelector: 
 PodMatchNodeSelector checks if a pod node selector matches the node label.
 
 #### 4.1.8 CheckNodeMemoryPressure
